@@ -9,7 +9,7 @@ if __name__ == '__main__':
         for k in range(3):
             for j in range(10):
                 for i in range(10):
-                    os.system("python3 s.py " + str((3*l+k)*100 + splitter*(int(sys.argv[1])-1)))
+                    os.system("python3 s.py " + str((3*l+k)*100 + splitter*(int(sys.argv[1])-1)) +"&")
                     time.sleep(random.randrange(0,3))
                 time.sleep(random.randrange(1, 5))
             time.sleep(random.randrange(15, 20))
