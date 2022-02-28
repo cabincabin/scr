@@ -20,3 +20,9 @@ if __name__ == '__main__':
         f = open("FORBIDDEN" + str(sys.argv[1]) + ".txt", "w")
         f.close()
         os.system("gsutil cp " +name + " gs://int_valid_webs/"+name)
+    if("oem" in r.url):
+        name = "OEM"+str(sys.argv[1])+".txt"
+        f = open("OEM"+str(sys.argv[1])+".txt", "w")
+        f.write(r.url)
+        f.close()
+        os.system("gsutil cp " + name + " gs://int_valid_webs/" + name)
